@@ -1,8 +1,17 @@
 import './SearchBarView.scss'
 
-function SearchBarView() {
+function SearchBarView({
+    onSearch,
+    onChange,
+    value
+}) {
     return <div className='container'>
-        SearchBarView
+        <input
+            placeholder='Nunca dejes de buscar'
+            onChange={onChange}
+            value={value}
+        />
+        <button onClick={onSearch}>Search!</button>
     </div>
 }
 
