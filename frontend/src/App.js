@@ -2,9 +2,9 @@ import {
 	createBrowserRouter,
 	RouterProvider,
 } from "react-router-dom"
-import HomePage from "./routes/HomePage/HomePage"
-import ItemDetail from "./routes/ItemDetail/ItemDetail"
-import ItemsResults from "./routes/ItemsResults/ItemsResults"
+import HomePageRoute from "./routes/HomePageRoute/HomePageRoute"
+import ItemDetailRoute from "./routes/ItemDetailRoute/ItemDetailRoute"
+import ItemsResultsRoute from "./routes/ItemsResultsRoute/ItemsResultsRoute"
 
 /*
     Hay dos formas de resolver el ruteo.
@@ -24,15 +24,15 @@ import ItemsResults from "./routes/ItemsResults/ItemsResults"
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <HomePage />,
+		element: <HomePageRoute />,
 	},
 	{
 		path: "/items",
-		element: <ItemsResults />,
+		element: <ItemsResultsRoute />,
 	},
 	{
 		path: "/items/:itemId",
-		element: <ItemDetail />,
+		element: <ItemDetailRoute />,
 	},
 ]);
 
