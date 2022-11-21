@@ -1,0 +1,12 @@
+{
+    "workbench.colorCustomizations": {
+        "[Palenight (Mild Contrast)]": {
+            "editorCursor.foreground": "#ffffff",
+            "scrollbarSlider.background": "#ffffff",
+            "editor.selectionBackground": "#ffffff5b"
+        },
+        "activityBar.background": "#18340C",
+        "titleBar.activeBackground": "#224911",
+        "titleBar.activeForeground": "#F7FDF4"
+    }
+}
