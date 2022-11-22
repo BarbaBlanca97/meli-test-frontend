@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
+import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs'
 import ItemsSearchBar from "../../components/SearchBar/ItemSearchBar/ItemsSearchBar"
 
 function ItemsResults() {
@@ -33,6 +34,7 @@ function ItemsResults() {
     return <div>
         <ItemsSearchBar />
         <div>
+            <BreadCrumbs />
             {items.map(item => <div key={item.id}>
                 <div>
                     Item: {item.name}
