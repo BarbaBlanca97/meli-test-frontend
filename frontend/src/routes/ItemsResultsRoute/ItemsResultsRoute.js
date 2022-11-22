@@ -24,7 +24,7 @@ function ItemsResults() {
                     price: {
                         currency: 'ARS',
                         amount: 33,
-                        decimal: 0,
+                        decimals: 0,
                     }
                 },
                 {
@@ -37,7 +37,7 @@ function ItemsResults() {
                     price: {
                         currency: 'ARS',
                         amount: 4567,
-                        decimal: 0,
+                        decimals: 0,
                     }
                 },
                 {
@@ -50,7 +50,7 @@ function ItemsResults() {
                     price: {
                         currency: 'ARS',
                         amount: 120,
-                        decimal: 50,
+                        decimals: 50,
                     }
                 },
             ])

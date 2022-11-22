@@ -4,15 +4,15 @@ export default function formatPrice(price) {
         currency: price.currency,
         currencyDisplay: 'narrowSymbol',
     })
-        .formatToParts(parseFloat(`${price.amount}.${price.decimal}`))
-        .filter(part => price.decimal !== 0 || !['decimal', 'fraction'].includes(part.type))
+        .formatToParts(parseFloat(`${price.amount}.${price.decimals}`))
+        .filter(part => price.decimals !== 0 || !['decimals', 'fraction'].includes(part.type))
         .map(part => {
             let newPartValue = '';
             switch (part.type) {
                 case 'group':
                     newPartValue = '.'
                     break;
-                case 'decimal':
+                case 'decimals':
                     newPartValue = ','
                     break;
                 case 'currency':
