@@ -1,4 +1,54 @@
+$input-height: 36px;
+
 .container {
     width: 100%;
-    background-color: yellow;
+    background-color: #ffe600;
+    
+    .content {
+        max-width: 980px;
+        margin: auto;
+        padding: 8px 24px;
+        display: flex;
+        align-items: center;
+
+        .search-bar {
+            display: flex;
+            flex-grow: 2;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-left: 24px;
+
+            &__input {
+                display: flex;
+                flex-grow: 2;
+                height: calc($input-height);
+                box-sizing: border-box;
+                border-radius: 3px 0px 0px 3px;
+                border: none;
+                outline: none;
+
+                padding-left: 16px;
+
+                &::placeholder {
+                    color: #999999;
+                }
+            }
+            
+            &__action {
+                height: $input-height;
+                width: calc($input-height * 1.2);
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #eeeeee;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #999999;
+                }
+            }
+        }
+
+    }
 }
