@@ -1,3 +1,20 @@
 .content {
     padding: 0px 24px 0px 24px;
+    max-width: 980px;
+    margin: auto;
+
+    .item {
+        display: flex;
+        flex-direction: row;
+
+        &__main-col {
+            max-width: 680px;
+            display: flex;
+            flex-direction: column;
+
+            &__picture {
+                margin-bottom: 32px;
+            }
+        }
+    }
 }

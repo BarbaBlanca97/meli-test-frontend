@@ -5,14 +5,14 @@ export default function formatPrice(price) {
         currencyDisplay: 'narrowSymbol',
     })
         .formatToParts(parseFloat(`${price.amount}.${price.decimals}`))
-        .filter(part => price.decimals !== 0 || !['decimals', 'fraction'].includes(part.type))
+        .filter(part => price.decimals !== 0 || !['decimal', 'fraction'].includes(part.type))
         .map(part => {
             let newPartValue = '';
             switch (part.type) {
                 case 'group':
                     newPartValue = '.'
                     break;
-                case 'decimals':
+                case 'decimal':
                     newPartValue = ','
                     break;
                 case 'currency':

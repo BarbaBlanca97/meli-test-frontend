@@ -28,10 +28,10 @@ function ItemDetail() {
         <div className={styles.content}>
             <BreadCrumbs crumbs={['Todos', 'Tecnología', 'Celulares']} />
             <div className={styles.item}>
-                <div>
-                    <img className={styles['item__picture']} src={item.picture} />
-                    <span className={styles['item__description-title']}>Descripcion del producto</span>
-                    <span className={styles['item__description']}>{item.description}</span>
+                <div className={styles['item__main-col']}>
+                    <img className={styles['item__main-col__picture']} src={item.picture} />
+                    <span className={styles['item__main-col__description-title']}>Descripcion del producto</span>
+                    <span className={styles['item__main-col__description']}>{item.description}</span>
                 </div>
                 <div>
                     <div className={styles['item__metadata']}>
