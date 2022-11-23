@@ -2,6 +2,8 @@ import {
 	createBrowserRouter,
 	RouterProvider,
 } from "react-router-dom"
+import { QueryClient, QueryClientProvider } from "react-query"
+
 import HomePageRoute from "./routes/HomePageRoute/HomePageRoute"
 import ItemDetailRoute from "./routes/ItemDetailRoute/ItemDetailRoute"
 import ItemsResultsRoute from "./routes/ItemsResultsRoute/ItemsResultsRoute"
@@ -36,8 +38,12 @@ const router = createBrowserRouter([
 	},
 ]);
 
+const queryClient = new QueryClient()
+
 function App() {
-	return <RouterProvider router={router} />
+	return <QueryClientProvider client={queryClient}>
+		<RouterProvider router={router} />
+	</QueryClientProvider>
 }
 
 export default App
