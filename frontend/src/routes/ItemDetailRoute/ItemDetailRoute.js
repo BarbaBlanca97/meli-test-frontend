@@ -4,6 +4,7 @@ import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs"
 
 import styles from './ItemDetail.module.scss'
 import formatPrice from "../../helpers/formatPrice"
+import Button from "../../components/Button/Button"
 
 function ItemDetail() {
     const { itemId } = useParams()
@@ -16,32 +17,36 @@ function ItemDetail() {
             "amount": 3456,
             "decimals": 74,
         },
-        picture: 'https://http2.mlstatic.com/D_NQ_NP_851471-MLA45979938567_052021-O.webp',
+        picture: 'https://www.shutterstock.com/image-vector/small-business-idea-successful-entrepreneur-260nw-2150553663.jpg',
         "condition": 'new',
         "free_shipping": true,
         "sold_quantity": 23,
         "description": 'In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign. You can enable this formatting by setting the currencySign option to "accounting". The default value is "standard"',
     }
 
+    const conditionText = item.condition === 'new'
+        ? 'Nuevo'
+        : 'Usado'
+
     return <div>
         <ItemsSearchBar />
         <div className={styles.content}>
             <BreadCrumbs crumbs={['Todos', 'Tecnología', 'Celulares']} />
             <div className={styles.item}>
-                <div className={styles['item__main-col']}>
-                    <img className={styles['item__main-col__picture']} src={item.picture} />
-                    <span className={styles['item__main-col__description-title']}>Descripcion del producto</span>
-                    <span className={styles['item__main-col__description']}>{item.description}</span>
+                <div className={styles['item__description-col']}>
+                    <img className={styles['item__description-col__picture']} src={item.picture} />
+                    <span className={styles['item__description-col__description-title']}>Descripcion del producto</span>
+                    <span className={styles['item__description-col__description']}>{item.description}</span>
                 </div>
-                <div>
-                    <div className={styles['item__metadata']}>
-                        <span>{item.condition}</span>
+                <div className={styles['item__info-col']}>
+                    <div className={styles['item__info-col__metadata']}>
+                        <span>{conditionText}</span>
                         {' - '}
                         <span>{item.sold_quantity} vendidos</span>
                     </div>
-                    <span className={styles['item__title']}>{item.title}</span>
-                    <span className={styles['item__price']}>{formatPrice(item.price)}</span>
-                    <button className={styles['item__buy']}>Comprar</button>
+                    <span className={styles['item__info-col__title']}>{item.title}</span>
+                    <span className={styles['item__info-col__price']}>{formatPrice(item.price)}</span>
+                    <Button type='primary'>Comprar</Button>
                 </div>
             </div>
         </div>
