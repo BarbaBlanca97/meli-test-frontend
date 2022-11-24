@@ -1,5 +1,7 @@
+@use '../../styles/global.scss' as styles;
+
 .container {
-    background-color: #eeeeee;
+    background-color: styles.$colorLightgray;
     min-height: 100vh;
-    padding-bottom: 24px;
+    padding-bottom: styles.$spacing3;
 }

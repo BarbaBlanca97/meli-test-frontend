@@ -1,3 +1,5 @@
+@use '../../styles/global.scss' as styles;
+
 @keyframes spin {
     50% {
         transform: scale(3) rotate(180deg);
@@ -15,8 +17,8 @@
     justify-content: center;
 
     .text {
-        font-size: 18px;
-        font-weight: bold;
+        font-size: styles.$fontNormal;
+        font-weight: styles.$fontWeightBold;
         animation-duration: 700ms;
         animation-timing-function: linear;
         animation-name: spin;

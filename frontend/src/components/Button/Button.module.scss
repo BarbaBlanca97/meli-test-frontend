@@ -1,17 +1,19 @@
+@use '../../styles/global.scss' as styles;
+
 .button {
-    padding: 16px 24px;
-    border-radius: 4px;
+    padding: styles.$spacing2 styles.$spacing3;
+    border-radius: styles.$borderRadius1;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: styles.$fontSmall;
     cursor: pointer;
     
     &--primary {
-        background-color: #3483fa;
-        color: white;
+        background-color: styles.$colorAction;
+        color: styles.$colorWhite;
         
         &:hover {
-            background-color: #73a7f5;
+            background-color: styles.$colorActionLight;
         }
     }
 }

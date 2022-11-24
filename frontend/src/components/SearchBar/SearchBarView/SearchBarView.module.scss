@@ -1,36 +1,38 @@
+@use '../../../styles/global.scss' as styles;
+
 $input-height: 36px;
 
 .container {
     width: 100%;
-    background-color: #ffe600;
+    background-color: styles.$colorPrimary;
     
     .content {
-        max-width: 980px;
+        max-width: styles.$spacingMainColumn;
         margin: auto;
-        padding: 8px 24px;
+        padding: styles.$spacing1 styles.$spacing3;
         display: flex;
         align-items: center;
 
         .search-bar {
             display: flex;
             flex-grow: 2;
-            border-radius: 3px;
+            border-radius: styles.$borderRadius1;
             overflow: hidden;
-            margin-left: 24px;
+            margin-left: styles.$spacing3;
 
             &__input {
                 display: flex;
                 flex-grow: 2;
                 height: calc($input-height);
                 box-sizing: border-box;
-                border-radius: 3px 0px 0px 3px;
+                border-radius: styles.$borderRadius1 0px 0px styles.$borderRadius1;
                 border: none;
                 outline: none;
 
-                padding-left: 16px;
+                padding-left: styles.$spacing2;
 
                 &::placeholder {
-                    color: #999999;
+                    color: styles.$colorGrayLighter;
                 }
             }
             
@@ -41,11 +43,11 @@ $input-height: 36px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: #eeeeee;
+                background-color: styles.$colorLightgray;
                 cursor: pointer;
 
                 &:hover {
-                    background-color: #999999;
+                    background-color: styles.$colorGrayLighter;
                 }
             }
         }

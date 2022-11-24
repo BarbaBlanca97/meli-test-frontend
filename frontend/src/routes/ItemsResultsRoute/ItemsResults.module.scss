@@ -1,18 +1,20 @@
+@use '../../styles/global.scss' as styles;
+
 .content {
-    padding-left: 24px;
-    padding-right: 24px;
-    max-width: 980px;
+    padding-left: styles.$spacing3;
+    padding-right: styles.$spacing3;
+    max-width: styles.$spacingMainColumn;
     margin: auto;
 
     .items {
         background-color: white;
-        border-radius: 4px;
+        border-radius: styles.$borderRadius1;
 
         &__separator {
-            margin: 0px 16px 0px 16px;
+            margin: 0px styles.$spacing2 0px styles.$spacing2;
             box-sizing: border-box;
-            width: calc(100% - 32px);
-            border-top: 1px solid #eeeeee;
+            width: calc(100% - styles.$spacing4);
+            border-top: 1px solid styles.$colorLightgray;
         }
     }
 }

@@ -1,17 +1,19 @@
+@use '../../styles/global.scss' as styles;
+
 .container {
     display: flex;
     flex-direction: row;
-    color: #333333;
-    padding: 16px;
+    color: styles.$colorDark;
+    padding: styles.$spacing2;
 
     &:hover {
-        background-color: #eeeeee;
+        background-color: styles.$colorLightgray;
         transition: 150ms;
     }
 
     .item-info {
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: styles.$spacing2;
+        padding-bottom: styles.$spacing2;
         flex-grow: 2;
 
         &__header {
@@ -21,20 +23,20 @@
             justify-content: space-between;
 
             &__amount {
-                font-size: 24px;
-                font-weight: 500;
-                margin-right: 8px;
+                font-size: styles.$fontBig;
+                font-weight: styles.$fontWeightMedium;
+                margin-right: styles.$spacing1;
             }
 
             &__location {
-                font-size: 12px;
-                color: #999999;
+                font-size: styles.$fontSmallest;
+                color: styles.$colorGrayLighter;
             }
         }
     
         &__title {
-            font-size: 18px;
-            margin-top: 32px;
+            font-size: styles.$fontNormal;
+            margin-top: styles.$spacing4;
         }
     
     }
@@ -42,7 +44,7 @@
     .image {
         width: 180px;
         height: 180px;
-        margin-right: 16px;
-        border-radius: 4px;
+        margin-right: styles.$spacing2;
+        border-radius: styles.$borderRadius1;
     }
 }

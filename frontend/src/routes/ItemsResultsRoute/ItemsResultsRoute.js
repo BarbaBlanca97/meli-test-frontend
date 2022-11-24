@@ -13,6 +13,8 @@ function ItemsResults() {
     const [searchParams] = useSearchParams()
     const search = searchParams.get('search')
 
+    // Las queries no estan devolviendo exactamente la data que pide el ejercio, eso se
+    // va a arreglar cuando se haga lo de backend
     const itemsQuery = useQuery([getItemsQueryId, search], () => getItems(search))
 
     const items = itemsQuery.data

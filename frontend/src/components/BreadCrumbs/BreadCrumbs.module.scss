@@ -1,10 +1,12 @@
+@use '../../styles/global.scss' as styles;
+
 .container {
-    padding: 16px 0px;
-    font-size: 14px;
-    color: #333333;
+    padding: styles.$spacing2 0px;
+    font-size: styles.$fontSmaller;
+    color: styles.$colorDark;
 
     .separator {
-        margin-left: 8px;
-        margin-right: 8px;
+        margin-left: styles.$spacing1;
+        margin-right: styles.$spacing1;
     }
 }

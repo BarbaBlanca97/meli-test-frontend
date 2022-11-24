@@ -17,6 +17,8 @@ const getItemConditionText = (item) => item.condition === 'new'
 function ItemDetail() {
     const { itemId } = useParams()
 
+    // Las queries no estan devolviendo exactamente la data que pide el ejercio, eso se
+    // va a arreglar cuando se haga lo de backend
     const itemQuery = useQuery([getItemQueryId, itemId], () => getItem(itemId))
 
     const item = itemQuery.data
