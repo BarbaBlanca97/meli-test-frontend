@@ -8,6 +8,12 @@ function SearchBarView({
     onChange,
     value
 }) {
+    const handleKeyUp = (e) => {
+        if (e.key === 'Enter') {
+            onSearch()
+        }
+    }
+
     return <div className={styles.container}>
         <div className={styles.content}>
             <img src={imageLogo}/>
@@ -16,8 +22,10 @@ function SearchBarView({
                     className={styles['search-bar__input']}
                     placeholder='Nunca dejes de buscar'
                     onChange={onChange}
+                    onKeyUp={handleKeyUp}
                     value={value}
                 />
+                {/* Este boton no está componentizado por ser muy específico */}
                 <button
                     onClick={onSearch}
                     className={styles['search-bar__action']}
