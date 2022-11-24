@@ -1,9 +1,10 @@
+import ScreenContainer from "../../components/ScreenContainer/ScreenContainer"
 import ItemsSearchBar from "../../components/SearchBar/ItemSearchBar/ItemsSearchBar"
 
 function HomePage() {
-    return <div>
+    return <ScreenContainer>
         <ItemsSearchBar />
-    </div>
+    </ScreenContainer>
 }
 
 export default HomePage

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate, useNavigation, useSearchParams } from "react-router-dom"
+import { useNavigate, useSearchParams } from "react-router-dom"
 import SearchBarView from "../SearchBarView/SearchBarView"
 
 /**
@@ -14,24 +14,22 @@ function ItemsSearchBar() {
     const navigate = useNavigate()
     const [searchParams] = useSearchParams()
 
-    const [query, setQuery] = useState(searchParams.get('search') || '')
+    const [search, setSearch] = useState(searchParams.get('search') || '')
 
     const handleSearch = () => {
-        navigate(`/items?search=${query}`, {
-            state: {
-                query
-            }
-        })
+        if (search) {
+            navigate(`/items?search=${search}`)
+        }
     }
 
     const handleChange = (e) => {
-        setQuery(e.target.value)
+        setSearch(e.target.value)
     }
 
     return <SearchBarView
         onSearch={handleSearch}
         onChange={handleChange}
-        value={query}
+        value={search}
     />
 }
 

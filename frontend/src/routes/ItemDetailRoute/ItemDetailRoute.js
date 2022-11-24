@@ -4,9 +4,9 @@ import ItemsSearchBar from "../../components/SearchBar/ItemSearchBar/ItemsSearch
 import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs"
 import formatPrice from "../../helpers/formatPrice"
 import Button from "../../components/Button/Button"
-
 import { getItemQueryId, getItem } from "../../api"
 import LoadingIndicator from "../../components/LoadingIndicator/LoadingIndicator"
+import ScreenContainer from "../../components/ScreenContainer/ScreenContainer"
 
 import styles from './ItemDetail.module.scss'
 
@@ -21,7 +21,7 @@ function ItemDetail() {
 
     const item = itemQuery.data
 
-    return <div>
+    return <ScreenContainer>
         <ItemsSearchBar />
         <div className={styles.content}>
             <BreadCrumbs crumbs={['Todos', 'Tecnología', 'Celulares']} />
@@ -46,7 +46,7 @@ function ItemDetail() {
                 : <LoadingIndicator />
             }
         </div>
-    </div>
+    </ScreenContainer>
 }
 
 export default ItemDetail

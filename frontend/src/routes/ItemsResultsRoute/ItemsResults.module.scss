@@ -1,8 +1,18 @@
 .content {
     padding-left: 24px;
     padding-right: 24px;
+    max-width: 980px;
+    margin: auto;
 
-    .separator {
-        border-top: 1px solid #eeeeee;
+    .items {
+        background-color: white;
+        border-radius: 4px;
+
+        &__separator {
+            margin: 0px 16px 0px 16px;
+            box-sizing: border-box;
+            width: calc(100% - 32px);
+            border-top: 1px solid #eeeeee;
+        }
     }
 }
