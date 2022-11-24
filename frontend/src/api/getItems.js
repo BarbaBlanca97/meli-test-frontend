@@ -13,33 +13,33 @@ const getItems = async (query) => {
                     location: 'Captial Federal',
                     price: {
                         currency: 'ARS',
-                        amount: 33,
-                        decimals: 0,
+                        amount: 7890,
+                        decimals: 99,
                     }
                 },
                 {
                     id: 'id2',
-                    title: 'Item 2',
-                    picture: 'https://http2.mlstatic.com/D_NQ_NP_851471-MLA45979938567_052021-O.webp',
+                    title: 'Sierra circular eléctrica Bosch Professional GKS 150 184mm 1500W azul 220V',
+                    picture: 'https://http2.mlstatic.com/D_NQ_NP_992170-MLA40581052455_012020-V.webp',
                     condition: 'usd',
                     free_shipping: false,
                     location: 'Paraná',
                     price: {
                         currency: 'ARS',
-                        amount: 4567,
+                        amount: 21899,
                         decimals: 0,
                     }
                 },
                 {
                     id: 'id3',
-                    title: 'Item 3',
-                    picture: 'https://http2.mlstatic.com/D_NQ_NP_851471-MLA45979938567_052021-O.webp',
-                    condition: 'new',
+                    title: 'Motorola G42 128 Gb Verde Atlántico 4gb Ram',
+                    picture: 'https://http2.mlstatic.com/D_NQ_NP_930921-MLA52181901586_102022-V.webp',
+                    condition: 'usd',
                     free_shipping: false,
                     location: 'Captial Federal',
                     price: {
                         currency: 'ARS',
-                        amount: 120,
+                        amount: 57999,
                         decimals: 50,
                     }
                 },

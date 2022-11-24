@@ -11,11 +11,11 @@ const getItem = async (itemId) => {
                     "amount": 3456,
                     "decimals": 74,
                 },
-                picture: 'https://www.shutterstock.com/image-vector/small-business-idea-successful-entrepreneur-260nw-2150553663.jpg',
+                picture: 'https://http2.mlstatic.com/D_NQ_NP_610517-MLA50731051105_072022-O.webp',
                 "condition": 'new',
                 "free_shipping": true,
                 "sold_quantity": 23,
-                "description": 'In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign. You can enable this formatting by setting the currencySign option to "accounting". The default value is "standard"',
+                "description": 'La sierra Einhell TC-CS 1400/1 es la solución para realizar cortes con precisión y velocidad. Es un producto que hace la tarea más fácil y por lo tanto es excelente para equipar un taller o una carpintería, ya sea profesional o amateur. Diámetro del disco Su disco de 184mm posibilita cortes definidos y prolijos, difíciles de alcanzar de manera manual.',
             })
         }, 2600)
     })
