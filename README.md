@@ -9,6 +9,8 @@ Hay mucha data mockeada sin mockear del todo el comportamiento, por ejemplo:
 La vista de detalle de un item muestra siempre el mismo, pero el parámetro en la URL es dinámico y desde donde
 se hace la query está ese valor, no lo hago más dinámico por cuestión de tiempo. En una próxima entrega eso funcionaría como se espera.
 
+Otra idea era separar las rutas en vista/contenedor, también lo voy a agregar más tarde probablemente
+
 ## Instrucciones
 
 Para iniciar, abrir un terminal en la carpeta frontend y ejecutar:
