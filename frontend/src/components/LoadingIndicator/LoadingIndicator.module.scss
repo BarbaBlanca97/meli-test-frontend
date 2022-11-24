@@ -1,0 +1,25 @@
+@keyframes spin {
+    50% {
+        transform: scale(3) rotate(180deg);
+    }
+
+    100% { 
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.container {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+        font-size: 18px;
+        font-weight: bold;
+        animation-duration: 700ms;
+        animation-timing-function: linear;
+        animation-name: spin;
+        animation-iteration-count: infinite;
+    }
+}

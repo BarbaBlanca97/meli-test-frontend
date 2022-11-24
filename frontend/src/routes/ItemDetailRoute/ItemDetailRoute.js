@@ -2,12 +2,13 @@ import { useParams } from "react-router-dom"
 import { useQuery } from "react-query"
 import ItemsSearchBar from "../../components/SearchBar/ItemSearchBar/ItemsSearchBar"
 import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs"
-
-import styles from './ItemDetail.module.scss'
 import formatPrice from "../../helpers/formatPrice"
 import Button from "../../components/Button/Button"
 
 import { getItemQueryId, getItem } from "../../api"
+import LoadingIndicator from "../../components/LoadingIndicator/LoadingIndicator"
+
+import styles from './ItemDetail.module.scss'
 
 const getItemConditionText = (item) => item.condition === 'new'
     ? 'Nuevo'
@@ -16,7 +17,7 @@ const getItemConditionText = (item) => item.condition === 'new'
 function ItemDetail() {
     const { itemId } = useParams()
 
-    const itemQuery = useQuery(getItemQueryId, () => getItem(itemId))
+    const itemQuery = useQuery([getItemQueryId, itemId], () => getItem(itemId))
 
     const item = itemQuery.data
 
@@ -42,7 +43,7 @@ function ItemDetail() {
                         <Button type='primary'>Comprar</Button>
                     </div>
                 </div>
-                : 'Loading...'
+                : <LoadingIndicator />
             }
         </div>
     </div>

@@ -3,14 +3,16 @@ import { useSearchParams } from 'react-router-dom'
 import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs'
 import ItemsSearchBar from "../../components/SearchBar/ItemSearchBar/ItemsSearchBar"
 import ItemResult from '../../components/ItemResult/ItemResult'
+import LoadingIndicator from '../../components/LoadingIndicator/LoadingIndicator'
 import { getItems, getItemsQueryId } from '../../api'
 
 import styles from './ItemsResults.module.scss'
 
 function ItemsResults() {
     const [searchParams] = useSearchParams()
-    
-    const itemsQuery = useQuery(getItemsQueryId, () => getItems(searchParams.get('search')))
+    const search = searchParams.get('search')
+
+    const itemsQuery = useQuery([getItemsQueryId, search], () => getItems(search))
 
     const items = itemsQuery.data
 
@@ -25,7 +27,7 @@ function ItemsResults() {
                             <div className={styles.separator}/>
                         }
                     </div>)
-                    : 'Loading...'
+                    : <LoadingIndicator />
                 }
             </div>
         </div>
